@@ -1,0 +1,802 @@
+@use "./helpers/variables" as *;
+@use "./helpers/mixins" as *;
+
+.cover {
+  background-image: url($cover_path);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+
+  // Header and Nav-Bar
+  header {
+    width: 100%;
+    position: absolute;
+    margin-top: 1.5em;
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+
+      .nav-links {
+        width: 50%;
+
+        ul {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          font-size: 2rem;
+          font-family: $main_font;
+
+          a {
+            text-decoration: none;
+            color: $third_color;
+            transition: 0.1s;
+
+            @include hover($secondary_color);
+          }
+
+          .button {
+            @include button;
+            @include hover($third_color);
+          }
+        }
+      }
+    }
+  }
+
+  // Cover Body
+  .cover-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: $main_font;
+
+    .cover-body-title {
+      h1 {
+        width: 40%;
+        color: $third_color;
+        font-size: 5rem;
+        text-align: center;
+      }
+
+      .buttons {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .button {
+          @include button;
+          @include hover($third_color);
+          text-decoration: none;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  // Cover Media Queries
+  @include breakpoints("mobile") {
+    header {
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+
+        .nav-links {
+          margin-top: 0.5em;
+          width: 90%;
+
+          ul {
+            font-size: 1.5rem;
+
+            .button {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cover-body {
+      .cover-body-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          font-size: 2.5rem;
+          width: 80%;
+        }
+        .buttons {
+          width: 80%;
+
+          .button {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoints("small") {
+    header {
+      .nav-bar {
+        .nav-links {
+          width: 60%;
+
+          ul {
+            font-size: 1.5rem;
+
+            .button {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cover-body {
+      .cover-body-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          font-size: 4rem;
+          width: 80%;
+        }
+        .buttons {
+          width: 80%;
+
+          .button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoints("medium") {
+    header {
+      .nav-bar {
+        .nav-links {
+          width: 60%;
+
+          ul {
+            font-size: 2rem;
+
+            .button {
+              font-size: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cover-body {
+      .cover-body-title {
+        h1 {
+          font-size: 4rem;
+          width: 60%;
+        }
+        .buttons {
+          width: 60%;
+
+          .button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoints("very large") {
+    header {
+      .nav-bar {
+        .nav-links {
+          width: 70%;
+
+          ul {
+            font-size: 3rem;
+
+            .button {
+              font-size: 2.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cover-body {
+      .cover-body-title {
+        h1 {
+          font-size: 8rem;
+          width: 70%;
+        }
+        .buttons {
+          width: 70%;
+
+          .button {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  height: 170vh;
+  background-color: $secondary_color;
+
+  .container {
+    height: 100%;
+  }
+
+  // About Intro
+  .intro {
+    display: flex;
+    padding: 75px 0 0;
+
+    .text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: $secondary_font;
+        margin-bottom: 1.5em;
+
+        @include span;
+      }
+    }
+
+    .img {
+      position: relative;
+
+      img {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  hr {
+    border: 1.5px solid black;
+    margin: 0;
+  }
+
+  // About Info
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      text-align: center;
+      margin: 1em 0 2em;
+
+      @include span;
+    }
+
+    .group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2em;
+
+      .text {
+        width: 40%;
+
+        h3 {
+          font-family: $main_font;
+          font-size: 2.5rem;
+          color: $third_color;
+        }
+
+        p {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+      }
+
+      img {
+        width: 40%;
+        height: 50%;
+      }
+    }
+
+    .reverse {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 2em;
+    }
+  }
+
+  // About Media Queries
+  @include breakpoints("mobile") {
+    height: 200vh;
+
+    .intro {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 150px 0 0;
+
+      .text {
+        margin-top: 1em;
+        width: 100%;
+        text-align: center;
+
+        p {
+          font-size: 1rem;
+
+          @include span;
+        }
+      }
+
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .info {
+      .group {
+        flex-direction: column;
+        align-items: center;
+
+        .text {
+          width: 100%;
+          text-align: center;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .reverse {
+        flex-direction: column;
+      }
+    }
+  }
+  @include breakpoints("small") {
+    height: 280vh;
+
+    .intro {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 300px 0 0;
+
+      .text {
+        margin-top: 1em;
+        width: 100%;
+        text-align: center;
+
+        p {
+          font-size: 1.25rem;
+
+          @include span;
+        }
+      }
+
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .info {
+      .group {
+        flex-direction: column;
+        align-items: center;
+
+        .text {
+          width: 100%;
+          text-align: center;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+          }
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .reverse {
+        flex-direction: column;
+      }
+    }
+  }
+  @include breakpoints("medium") {
+    height: 310vh;
+
+    .intro {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 450px 0 0;
+
+      .text {
+        margin-top: 1em;
+        width: 100%;
+        text-align: center;
+
+        p {
+          font-size: 1.25rem;
+
+          @include span;
+        }
+      }
+
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .info {
+      .group {
+        flex-direction: column;
+        align-items: center;
+
+        .text {
+          width: 100%;
+          text-align: center;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+          }
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .reverse {
+        flex-direction: column;
+      }
+    }
+  }
+  @include breakpoints("very large") {
+    height: 125vh;
+  }
+}
+
+.games {
+  height: 100vh;
+
+  .carousel {
+    height: 100%;
+
+    .carousel-inner {
+      height: 100%;
+
+      .carousel-item {
+        height: 100%;
+
+        .container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+
+          p {
+            width: 50%;
+            text-align: center;
+            color: $third_color;
+            font-family: $secondary_font;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      $games: "four", "three", "nv", "two", "one";
+      @each $game in $games {
+        .#{$game} {
+          background-image: url($game_path + #{$game} + ".png");
+          background-position: bottom;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  @include breakpoints("mobile") {
+    height: 75vh;
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          .container {
+            align-items: center;
+
+            img {
+              width: 75%;
+            }
+
+            p {
+              width: 75%;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        $games: "four", "three", "nv", "two", "one";
+        @each $game in $games {
+          .#{$game} {
+            background-position: 25%;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoints("small") {
+    height: 75vh;
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          .container {
+            align-items: center;
+
+            img {
+              width: 75%;
+            }
+
+            p {
+              width: 75%;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        $games: "four", "three", "nv", "two", "one";
+        @each $game in $games {
+          .#{$game} {
+            background-position: 25%;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoints("medium") {
+    height: 100vh;
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          .container {
+            align-items: center;
+
+            img {
+              width: 75%;
+            }
+
+            p {
+              width: 75%;
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        $games: "four", "three", "nv", "two", "one";
+        @each $game in $games {
+          .#{$game} {
+            background-position: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shows {
+  height: 100vh;
+  background-image: url($shows_path);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2em;
+
+  p {
+    width: 25%;
+    font-family: $main_font;
+    font-size: 3rem;
+    text-align: center;
+    color: $third_color;
+  }
+
+  @include breakpoints("mobile") {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+
+    p {
+      width: 50%;
+      font-size: 1.5rem;
+    }
+
+    .fallout-logo {
+      width: 75%;
+    }
+  }
+  @include breakpoints("small") {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+
+    p {
+      width: 35%;
+      font-size: 1.5rem;
+    }
+
+    .fallout-logo {
+      width: 50%;
+    }
+  }
+  @include breakpoints("medium") {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+
+    p {
+      width: 35%;
+      font-size: 1.5rem;
+    }
+
+    .fallout-logo {
+      width: 50%;
+    }
+  }
+  @include breakpoints("very large") {
+    background-size: cover;
+  }
+}
+
+.support {
+  height: 75vh;
+  background-image: url($support_path);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    font-family: $main_font;
+    font-size: 4rem;
+  }
+
+  p {
+    font-family: $secondary_font;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  form {
+    display: inline-flex;
+  }
+
+  .input {
+    input {
+      border: none;
+      outline: none;
+      padding: 0.5em;
+      font-size: 1.5rem;
+      font-family: $secondary_font;
+      font-weight: 600;
+    }
+
+    button {
+      @include button;
+      border: none;
+      outline: none;
+      padding: 0.5em;
+      font-size: 1.5rem;
+      font-family: $secondary_font;
+      font-weight: 600;
+    }
+  }
+
+  @include breakpoints("mobile") {
+    text-align: center;
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .input {
+      input {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+  @include breakpoints("small") {
+    text-align: center;
+
+    h4 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .input {
+      input {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @include breakpoints("medium") {
+    text-align: center;
+
+    h4 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .input {
+      input {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $secondary_color;
+
+  p {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5em 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}

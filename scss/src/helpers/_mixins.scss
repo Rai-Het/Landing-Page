@@ -1,0 +1,58 @@
+@use "./helpers/variables" as *;
+
+// <----- COVER MIXINS ----->
+//
+@mixin button {
+  background-color: $secondary_color;
+  padding: 0.25em 0.5em;
+  color: $main_color;
+  transition: 0.1s;
+}
+
+@mixin hover($color) {
+  &:hover {
+    color: $color;
+  }
+}
+
+// <----- ABOUT MIXINS ----->
+@mixin span {
+  span {
+    color: $third_color;
+  }
+}
+
+// <----- MEDIA QUERIES ----->
+//
+@mixin breakpoints($point) {
+  // Mobile Screen
+  @if $point == "mobile" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  // Small Screen
+  @else if $point == "small" {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+  // Medium Screen
+  @else if $point == "medium" {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+  // Large Screen
+  @else if $point == "large" {
+    @media (min-width: 1200px) and (max-width: 2559) {
+      @content;
+    }
+  }
+  // Very Large Screen
+  @else if $point == "very large" {
+    @media (min-width: 2560px) {
+      @content;
+    }
+  }
+}

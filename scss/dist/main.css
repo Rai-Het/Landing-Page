@@ -1,0 +1,842 @@
+.cover {
+  background-image: url("../../media/IMG_Cover.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.cover header {
+  width: 100%;
+  position: absolute;
+  margin-top: 1.5em;
+}
+.cover header .nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cover header .nav-bar .nav-links {
+  width: 50%;
+}
+.cover header .nav-bar .nav-links ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+.cover header .nav-bar .nav-links ul a {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.cover header .nav-bar .nav-links ul a:hover {
+  color: #ddb724;
+}
+.cover header .nav-bar .nav-links ul .button {
+  background-color: #ddb724;
+  padding: 0.25em 0.5em;
+  color: #000000;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.cover header .nav-bar .nav-links ul .button:hover {
+  color: #ffffff;
+}
+.cover .cover-body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+.cover .cover-body .cover-body-title h1 {
+  width: 40%;
+  color: #ffffff;
+  font-size: 5rem;
+  text-align: center;
+}
+.cover .cover-body .cover-body-title .buttons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.cover .cover-body .cover-body-title .buttons .button {
+  background-color: #ddb724;
+  padding: 0.25em 0.5em;
+  color: #000000;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.cover .cover-body .cover-body-title .buttons .button:hover {
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .cover header .nav-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cover header .nav-bar .nav-links {
+    margin-top: 0.5em;
+    width: 90%;
+  }
+  .cover header .nav-bar .nav-links ul {
+    font-size: 1.5rem;
+  }
+  .cover header .nav-bar .nav-links ul .button {
+    font-size: 1.25rem;
+  }
+  .cover .cover-body .cover-body-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cover .cover-body .cover-body-title h1 {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  .cover .cover-body .cover-body-title .buttons {
+    width: 80%;
+  }
+  .cover .cover-body .cover-body-title .buttons .button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cover header .nav-bar .nav-links {
+    width: 60%;
+  }
+  .cover header .nav-bar .nav-links ul {
+    font-size: 1.5rem;
+  }
+  .cover header .nav-bar .nav-links ul .button {
+    font-size: 1.25rem;
+  }
+  .cover .cover-body .cover-body-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cover .cover-body .cover-body-title h1 {
+    font-size: 4rem;
+    width: 80%;
+  }
+  .cover .cover-body .cover-body-title .buttons {
+    width: 80%;
+  }
+  .cover .cover-body .cover-body-title .buttons .button {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cover header .nav-bar .nav-links {
+    width: 60%;
+  }
+  .cover header .nav-bar .nav-links ul {
+    font-size: 2rem;
+  }
+  .cover header .nav-bar .nav-links ul .button {
+    font-size: 1.75rem;
+  }
+  .cover .cover-body .cover-body-title h1 {
+    font-size: 4rem;
+    width: 60%;
+  }
+  .cover .cover-body .cover-body-title .buttons {
+    width: 60%;
+  }
+  .cover .cover-body .cover-body-title .buttons .button {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 2560px) {
+  .cover header .nav-bar .nav-links {
+    width: 70%;
+  }
+  .cover header .nav-bar .nav-links ul {
+    font-size: 3rem;
+  }
+  .cover header .nav-bar .nav-links ul .button {
+    font-size: 2.75rem;
+  }
+  .cover .cover-body .cover-body-title h1 {
+    font-size: 8rem;
+    width: 70%;
+  }
+  .cover .cover-body .cover-body-title .buttons {
+    width: 70%;
+  }
+  .cover .cover-body .cover-body-title .buttons .button {
+    font-size: 4rem;
+  }
+}
+
+.about {
+  height: 170vh;
+  background-color: #ddb724;
+}
+.about .container {
+  height: 100%;
+}
+.about .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 75px 0 0;
+}
+.about .intro .text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about .intro .text p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 1.5em;
+}
+.about .intro .text p span {
+  color: #ffffff;
+}
+.about .intro .img {
+  position: relative;
+}
+.about .intro .img img {
+  position: absolute;
+  bottom: 0;
+}
+.about hr {
+  border: 1.5px solid black;
+  margin: 0;
+}
+.about .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about .info h5 {
+  text-align: center;
+  margin: 1em 0 2em;
+}
+.about .info h5 span {
+  color: #ffffff;
+}
+.about .info .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+.about .info .group .text {
+  width: 40%;
+}
+.about .info .group .text h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+.about .info .group .text p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.about .info .group img {
+  width: 40%;
+  height: 50%;
+}
+.about .info .reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+@media (max-width: 767px) {
+  .about {
+    height: 200vh;
+  }
+  .about .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 150px 0 0;
+  }
+  .about .intro .text {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .about .intro .text p {
+    font-size: 1rem;
+  }
+  .about .intro .text p span {
+    color: #ffffff;
+  }
+  .about .intro .img img {
+    width: 100%;
+  }
+  .about .info .group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .info .group .text {
+    width: 100%;
+    text-align: center;
+  }
+  .about .info .group .text h3 {
+    font-size: 1.5rem;
+  }
+  .about .info .group .text p {
+    font-size: 1rem;
+  }
+  .about .info .group img {
+    width: 80%;
+  }
+  .about .info .reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .about {
+    height: 280vh;
+  }
+  .about .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 300px 0 0;
+  }
+  .about .intro .text {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .about .intro .text p {
+    font-size: 1.25rem;
+  }
+  .about .intro .text p span {
+    color: #ffffff;
+  }
+  .about .intro .img img {
+    width: 100%;
+  }
+  .about .info .group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .info .group .text {
+    width: 100%;
+    text-align: center;
+  }
+  .about .info .group .text h3 {
+    font-size: 2rem;
+  }
+  .about .info .group .text p {
+    font-size: 1.5rem;
+  }
+  .about .info .group img {
+    width: 80%;
+  }
+  .about .info .reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about {
+    height: 310vh;
+  }
+  .about .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 450px 0 0;
+  }
+  .about .intro .text {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .about .intro .text p {
+    font-size: 1.25rem;
+  }
+  .about .intro .text p span {
+    color: #ffffff;
+  }
+  .about .intro .img img {
+    width: 100%;
+  }
+  .about .info .group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .info .group .text {
+    width: 100%;
+    text-align: center;
+  }
+  .about .info .group .text h3 {
+    font-size: 2rem;
+  }
+  .about .info .group .text p {
+    font-size: 1.5rem;
+  }
+  .about .info .group img {
+    width: 80%;
+  }
+  .about .info .reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (min-width: 2560px) {
+  .about {
+    height: 125vh;
+  }
+}
+
+.games {
+  height: 100vh;
+}
+.games .carousel {
+  height: 100%;
+}
+.games .carousel .carousel-inner {
+  height: 100%;
+}
+.games .carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+.games .carousel .carousel-inner .carousel-item .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.games .carousel .carousel-inner .carousel-item .container p {
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.games .carousel .carousel-inner .four {
+  background-image: url("../../media/games/IMG_FALLOUTfour.png");
+  background-position: bottom;
+  background-size: cover;
+}
+.games .carousel .carousel-inner .three {
+  background-image: url("../../media/games/IMG_FALLOUTthree.png");
+  background-position: bottom;
+  background-size: cover;
+}
+.games .carousel .carousel-inner .nv {
+  background-image: url("../../media/games/IMG_FALLOUTnv.png");
+  background-position: bottom;
+  background-size: cover;
+}
+.games .carousel .carousel-inner .two {
+  background-image: url("../../media/games/IMG_FALLOUTtwo.png");
+  background-position: bottom;
+  background-size: cover;
+}
+.games .carousel .carousel-inner .one {
+  background-image: url("../../media/games/IMG_FALLOUTone.png");
+  background-position: bottom;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .games {
+    height: 75vh;
+  }
+  .games .carousel .carousel-inner .carousel-item .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .games .carousel .carousel-inner .carousel-item .container img {
+    width: 75%;
+  }
+  .games .carousel .carousel-inner .carousel-item .container p {
+    width: 75%;
+    font-size: 1rem;
+  }
+  .games .carousel .carousel-inner .four {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .three {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .nv {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .two {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .one {
+    background-position: 25%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .games {
+    height: 75vh;
+  }
+  .games .carousel .carousel-inner .carousel-item .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .games .carousel .carousel-inner .carousel-item .container img {
+    width: 75%;
+  }
+  .games .carousel .carousel-inner .carousel-item .container p {
+    width: 75%;
+    font-size: 1rem;
+  }
+  .games .carousel .carousel-inner .four {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .three {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .nv {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .two {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .one {
+    background-position: 25%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .games {
+    height: 100vh;
+  }
+  .games .carousel .carousel-inner .carousel-item .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .games .carousel .carousel-inner .carousel-item .container img {
+    width: 75%;
+  }
+  .games .carousel .carousel-inner .carousel-item .container p {
+    width: 75%;
+    font-size: 1.5rem;
+  }
+  .games .carousel .carousel-inner .four {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .three {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .nv {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .two {
+    background-position: 25%;
+  }
+  .games .carousel .carousel-inner .one {
+    background-position: 25%;
+  }
+}
+
+.shows {
+  height: 100vh;
+  background-image: url("../../media/IMG_FALLOUT-TV.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 2em;
+}
+.shows p {
+  width: 25%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .shows {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .shows p {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  .shows .fallout-logo {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .shows {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .shows p {
+    width: 35%;
+    font-size: 1.5rem;
+  }
+  .shows .fallout-logo {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .shows {
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .shows p {
+    width: 35%;
+    font-size: 1.5rem;
+  }
+  .shows .fallout-logo {
+    width: 50%;
+  }
+}
+@media (min-width: 2560px) {
+  .shows {
+    background-size: cover;
+  }
+}
+
+.support {
+  height: 75vh;
+  background-image: url("../../media/IMG_SIGN-UP.png");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.support h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+}
+.support p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.support form {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.support .input input {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+.support .input button {
+  background-color: #ddb724;
+  padding: 0.25em 0.5em;
+  color: #000000;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .support {
+    text-align: center;
+  }
+  .support h4 {
+    font-size: 2rem;
+  }
+  .support p {
+    font-size: 1rem;
+  }
+  .support .input input {
+    font-size: 1rem;
+  }
+  .support .input button {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .support {
+    text-align: center;
+  }
+  .support h4 {
+    font-size: 3rem;
+  }
+  .support p {
+    font-size: 1.5rem;
+  }
+  .support .input input {
+    font-size: 1.5rem;
+  }
+  .support .input button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .support {
+    text-align: center;
+  }
+  .support h4 {
+    font-size: 3rem;
+  }
+  .support p {
+    font-size: 1.5rem;
+  }
+  .support .input input {
+    font-size: 1.5rem;
+  }
+  .support .input button {
+    font-size: 1.5rem;
+  }
+}
+
+.footer {
+  background-color: #ddb724;
+}
+.footer p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
